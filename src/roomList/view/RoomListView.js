@@ -27,7 +27,6 @@ const UseStyles = makeStyles((theme) => ({
 
 export default function ListView(props) {
     const { roomList } = props;
-    console.log(roomList);
     const classes = UseStyles();
     return (
         <div className={classes.root}>

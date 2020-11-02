@@ -6,9 +6,7 @@ import Footer from "../../footer/view/Footer";
 import "../scss/RoomList.scss";
 import SearchBarContainer from "../container/SearchBarContainer";
 import RoomListViewContainer from "../container/RoomListViewContainer";
-function RoomList(props) {
-    const { roomList } = props;
-    console.log(roomList);
+function RoomList() {
     return (
         <>
             <Header />

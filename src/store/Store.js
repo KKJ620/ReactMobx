@@ -11,7 +11,7 @@ class Store {
     //3. state 데이터 리턴 - @computed get으로 함수 구현
     @computed
     get getRoomList() {
-        return this.roomList ? { ...this.roomList } : [];
+        return this.roomList ? this.roomList.slice() : [];
     }
 
     @computed
@@ -22,6 +22,18 @@ class Store {
     @action
     setRoomName(roomName) {
         this.roomName = roomName;
+    }
+
+    @action
+    addRoomList() {
+        const tmpData = {
+            img: "./pomodoro.png",
+            title: "테스트 방",
+            author: "테스트",
+        };
+        this.roomList = [...this.roomList, tmpData];
+
+        console.log(this.roomList);
     }
 }
 

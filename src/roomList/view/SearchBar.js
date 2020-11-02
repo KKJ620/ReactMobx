@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SearchBar(props) {
     const classes = useStyles();
 
-    const { setRoomName, roomName } = props;
+    const { setRoomName, roomName, addRoomList } = props;
 
     return (
         <div className={classes.root}>
@@ -57,9 +57,11 @@ export default function SearchBar(props) {
                     <SearchIcon />
                 </IconButton>
             </Paper>
-            <Link to="/room-create" className={classes.text}>
+            {/* 스토어 되는지 확인하는 코드, 눌렀을 때 roomList가 늘어나서 제대로 렌더링 되는지 */}
+            <button onClick={addRoomList}>테스트</button>
+            {/* <Link to="/room-create" className={classes.text}>
                 <ButtonTemplate text={"방 만들기"} />
-            </Link>
+            </Link> */}
 
             {/* 임시적으로 방 입장 버튼 만듬 */}
             <Link to="/room-entrance" className={classes.text}>
